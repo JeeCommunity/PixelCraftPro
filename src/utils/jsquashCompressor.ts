@@ -1,5 +1,5 @@
 import { encode as encodeJpeg } from '@jsquash/jpeg';
-import * as oxipng from '@jsquash/oxipng';
+import { optimise as encodePng } from '@jsquash/oxipng';
 import { encode as encodeWebp } from '@jsquash/webp';
 
 export interface CompressionResult {
@@ -21,8 +21,6 @@ export async function compressImageWithJSquash(
   targetBytes: number | null, // null means use quality mode
   qualityModeValue: number = 80 // 1-100
 ): Promise<CompressionResult> {
-  const encodePngFn = (oxipng as any).default || (oxipng as any).encode || oxipng;
-
   let format = mimeType;
   if (!format.startsWith('image/')) format = 'image/jpeg';
   if (format === 'image/jpg') format = 'image/jpeg';
@@ -69,7 +67,7 @@ export async function compressImageWithJSquash(
       bestBuffer = await encodeWebp(imageData, { quality: qNorm });
       codec = 'libwebp';
     } else {
-      bestBuffer = await encodePngFn(imageData);
+      bestBuffer = await encodePng(imageData);
       codec = 'OxiPNG';
     }
 
@@ -97,7 +95,7 @@ export async function compressImageWithJSquash(
 
     if (format === 'image/png') {
       iterations++;
-      const buf = await encodePngFn(imageData);
+      const buf = await encodePng(imageData);
       const size = buf.byteLength;
       candidates.push({ buffer: buf, size, w: testW, h: testH });
       if (size <= targetBytes) {

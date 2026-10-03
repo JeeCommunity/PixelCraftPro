@@ -1,123 +1,148 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://ais-pre-ejhxqpqotm5td6vcbto2mz-952729289755.asia-east1.run.app/</loc>
+    <loc>https://pixelcraft-pro.netlify.app/</loc>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://ais-pre-ejhxqpqotm5td6vcbto2mz-952729289755.asia-east1.run.app/background-remover</loc>
+    <loc>https://pixelcraft-pro.netlify.app/background-remover</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://ais-pre-ejhxqpqotm5td6vcbto2mz-952729289755.asia-east1.run.app/image-compressor</loc>
+    <loc>https://pixelcraft-pro.netlify.app/image-compressor</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://ais-pre-ejhxqpqotm5td6vcbto2mz-952729289755.asia-east1.run.app/compress-image-20kb</loc>
+    <loc>https://pixelcraft-pro.netlify.app/compress-image-20kb</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ais-pre-ejhxqpqotm5td6vcbto2mz-952729289755.asia-east1.run.app/compress-image-50kb</loc>
+    <loc>https://pixelcraft-pro.netlify.app/compress-image-50kb</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ais-pre-ejhxqpqotm5td6vcbto2mz-952729289755.asia-east1.run.app/compress-image-100kb</loc>
+    <loc>https://pixelcraft-pro.netlify.app/compress-image-100kb</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ais-pre-ejhxqpqotm5td6vcbto2mz-952729289755.asia-east1.run.app/compress-image-200kb</loc>
+    <loc>https://pixelcraft-pro.netlify.app/compress-image-200kb</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ais-pre-ejhxqpqotm5td6vcbto2mz-952729289755.asia-east1.run.app/compress-image-500kb</loc>
+    <loc>https://pixelcraft-pro.netlify.app/compress-image-500kb</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ais-pre-ejhxqpqotm5td6vcbto2mz-952729289755.asia-east1.run.app/photo-resizer</loc>
+    <loc>https://pixelcraft-pro.netlify.app/photo-resizer</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ais-pre-ejhxqpqotm5td6vcbto2mz-952729289755.asia-east1.run.app/signature-resizer</loc>
+    <loc>https://pixelcraft-pro.netlify.app/signature-resizer</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ais-pre-ejhxqpqotm5td6vcbto2mz-952729289755.asia-east1.run.app/passport-photo-resizer</loc>
+    <loc>https://pixelcraft-pro.netlify.app/passport-photo-resizer</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ais-pre-ejhxqpqotm5td6vcbto2mz-952729289755.asia-east1.run.app/image-to-pdf</loc>
+    <loc>https://pixelcraft-pro.netlify.app/image-to-pdf</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ais-pre-ejhxqpqotm5td6vcbto2mz-952729289755.asia-east1.run.app/jpg-to-pdf</loc>
+    <loc>https://pixelcraft-pro.netlify.app/jpg-to-pdf</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ais-pre-ejhxqpqotm5td6vcbto2mz-952729289755.asia-east1.run.app/png-to-pdf</loc>
+    <loc>https://pixelcraft-pro.netlify.app/png-to-pdf</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ais-pre-ejhxqpqotm5td6vcbto2mz-952729289755.asia-east1.run.app/pdf-to-jpg</loc>
+    <loc>https://pixelcraft-pro.netlify.app/pdf-to-jpg</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ais-pre-ejhxqpqotm5td6vcbto2mz-952729289755.asia-east1.run.app/pdf-to-png</loc>
+    <loc>https://pixelcraft-pro.netlify.app/pdf-to-png</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ais-pre-ejhxqpqotm5td6vcbto2mz-952729289755.asia-east1.run.app/merge-pdf</loc>
+    <loc>https://pixelcraft-pro.netlify.app/merge-pdf</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ais-pre-ejhxqpqotm5td6vcbto2mz-952729289755.asia-east1.run.app/split-pdf</loc>
+    <loc>https://pixelcraft-pro.netlify.app/split-pdf</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ais-pre-ejhxqpqotm5td6vcbto2mz-952729289755.asia-east1.run.app/rotate-pdf</loc>
+    <loc>https://pixelcraft-pro.netlify.app/rotate-pdf</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ais-pre-ejhxqpqotm5td6vcbto2mz-952729289755.asia-east1.run.app/pdf-compressor</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://ais-pre-ejhxqpqotm5td6vcbto2mz-952729289755.asia-east1.run.app/image-format-converter</loc>
+    <loc>https://pixelcraft-pro.netlify.app/pdf-compressor</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ais-pre-ejhxqpqotm5td6vcbto2mz-952729289755.asia-east1.run.app/jpg-to-webp</loc>
+    <loc>https://pixelcraft-pro.netlify.app/image-format-converter</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ais-pre-ejhxqpqotm5td6vcbto2mz-952729289755.asia-east1.run.app/webp-to-jpg</loc>
+    <loc>https://pixelcraft-pro.netlify.app/jpg-to-webp</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://pixelcraft-pro.netlify.app/png-to-webp</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://pixelcraft-pro.netlify.app/jpg-to-avif</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://pixelcraft-pro.netlify.app/png-to-avif</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://pixelcraft-pro.netlify.app/webp-to-jpg</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://pixelcraft-pro.netlify.app/youtube-to-slides</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ais-pre-ejhxqpqotm5td6vcbto2mz-952729289755.asia-east1.run.app/youtube-to-slides</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://pixelcraft-pro.netlify.app/privacy-policy</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://pixelcraft-pro.netlify.app/terms</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
   </url>
 </urlset>

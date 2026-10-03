@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://ais-pre-ejhxqpqotm5td6vcbto2mz-952729289755.asia-east1.run.app/sitemap.xml
+Sitemap: https://pixelcraft-pro.netlify.app/sitemap.xml

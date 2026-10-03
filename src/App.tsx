@@ -118,9 +118,9 @@ export default function App() {
 
   // Update dynamic SEO metadata and canonical tags per tool
   useEffect(() => {
-    const origin = window.location.origin;
+    const PRODUCTION_ORIGIN = 'https://pixelcraft-pro.netlify.app';
     const currentPath = isNotFound ? window.location.pathname : getCleanPathForTool(currentTool);
-    const canonicalUrl = `${origin}${currentPath}`;
+    const canonicalUrl = `${PRODUCTION_ORIGIN}${currentPath}`;
 
     let title = 'PixelCraft Pro — Professional Image & PDF Tools Suite';
     let description = 'Professional browser-based image and PDF toolkit featuring background removal, compression, format conversion, and resizing.';
