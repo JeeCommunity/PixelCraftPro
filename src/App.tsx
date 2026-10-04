@@ -1,6 +1,7 @@
 import React, { useState, useEffect, lazy, Suspense } from 'react';
 import { ToolId } from './types';
 import { Header } from './components/Header';
+import { AppActionsSection } from './components/AppActionsSection';
 import { Footer } from './components/Footer';
 import { ToolGrid } from './components/ToolGrid';
 import { incrementToolUsage } from './utils/usageTracking';
@@ -423,6 +424,7 @@ export default function App() {
   return (
     <div className="min-h-full flex flex-col bg-slate-950 text-slate-100 selection:bg-indigo-500 selection:text-white">
       <Header currentTool={currentTool} onSelectTool={handleSelectTool} />
+      <AppActionsSection />
       <main className="flex-1 flex flex-col">
         {renderTool()}
       </main>

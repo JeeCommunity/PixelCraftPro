@@ -1,9 +1,14 @@
 import React, { useState, useRef } from 'react';
 import { Upload, Maximize, Download, RefreshCw, CheckCircle2, AlertCircle, Image as ImageIcon, Sliders, Lock, Unlock, Loader2, Clock } from 'lucide-react';
-import pica from 'pica';
-import { jsPDF } from 'jspdf';
 
-const picaInstance = pica();
+let picaInstance: any = null;
+const getPica = async () => {
+  if (!picaInstance) {
+    const { default: pica } = await import('pica');
+    picaInstance = pica();
+  }
+  return picaInstance;
+};
 
 export const PhotoResizer: React.FC = () => {
   const [file, setFile] = useState<File | null>(null);
@@ -109,7 +114,8 @@ export const PhotoResizer: React.FC = () => {
       targetCanvas.height = height;
 
       setProcessingStage('Resizing image...');
-      await picaInstance.resize(srcCanvas, targetCanvas, {
+      const picaInst = await getPica();
+      await picaInst.resize(srcCanvas, targetCanvas, {
         quality: 3,
         unsharpAmount: 80,
         unsharpRadius: 0.6,
@@ -149,6 +155,7 @@ export const PhotoResizer: React.FC = () => {
     const baseName = (file?.name || 'resized_photo').replace(/\.[^/.]+$/, '');
 
     if (downloadFormat === 'pdf') {
+      const { jsPDF } = await import('jspdf');
       const doc = new jsPDF({
         orientation: width > height ? 'landscape' : 'portrait',
         unit: 'mm',

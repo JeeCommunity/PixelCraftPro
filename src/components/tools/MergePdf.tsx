@@ -1,6 +1,5 @@
 import React, { useState, useRef } from 'react';
 import { Upload, FileText, Download, RefreshCw, AlertCircle, Trash2, ArrowUp, ArrowDown, Merge, CheckCircle2, RotateCcw, Clock, Loader2, XCircle } from 'lucide-react';
-import { PDFDocument } from 'pdf-lib';
 
 interface PdfItem {
   id: string;
@@ -73,6 +72,7 @@ export const MergePdf: React.FC = () => {
     }, 1000);
 
     try {
+      const { PDFDocument } = await import('pdf-lib');
       const mergedPdf = await PDFDocument.create();
       let totalMergedPages = 0;
 

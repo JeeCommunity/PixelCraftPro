@@ -1,11 +1,5 @@
 import React, { useState, useRef } from 'react';
 import { Upload, FileText, Download, RotateCcw, AlertCircle, Loader2, Cpu, Info, CheckCircle2, XCircle, Clock, Zap } from 'lucide-react';
-import * as pdfjsLib from 'pdfjs-dist';
-import workerUrl from 'pdfjs-dist/build/pdf.worker.min.js?url';
-import { jsPDF } from 'jspdf';
-
-// Configure bundled PDF.js worker
-pdfjsLib.GlobalWorkerOptions.workerSrc = workerUrl || `https://unpkg.com/pdfjs-dist@${pdfjsLib.version}/build/pdf.worker.min.js`;
 
 export const PdfCompressor: React.FC = () => {
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
@@ -91,6 +85,12 @@ export const PdfCompressor: React.FC = () => {
     const tStart = performance.now();
 
     try {
+      const pdfjsLib = await import('pdfjs-dist');
+      const { default: workerUrl } = await import('pdfjs-dist/build/pdf.worker.min.js?url');
+      const { jsPDF } = await import('jspdf');
+
+      pdfjsLib.GlobalWorkerOptions.workerSrc = workerUrl || `https://unpkg.com/pdfjs-dist@${pdfjsLib.version}/build/pdf.worker.min.js`;
+
       const arrayBuffer = await selectedFile.arrayBuffer();
       const tRead = performance.now();
 
@@ -115,7 +115,7 @@ export const PdfCompressor: React.FC = () => {
       setStatusText(`Optimizing resources (0 of ${numPages} pages)...`);
       const tProcess = performance.now();
 
-      let pdfJspdf: jsPDF | null = null;
+      let pdfJspdf: any = null;
 
       for (let i = 1; i <= numPages; i++) {
         setStatusText(`Optimizing resources (page ${i} of ${numPages})...`);

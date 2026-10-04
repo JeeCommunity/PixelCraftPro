@@ -118,10 +118,6 @@ export const ToolGrid: React.FC<ToolGridProps> = ({ onSelectTool }) => {
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-10">
       {/* Hero Section */}
       <div className="text-center space-y-4 max-w-3xl mx-auto">
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-300 text-xs font-semibold">
-          <Sparkles className="w-3.5 h-3.5" />
-          <span>Professional Web-Scale Tool Suite</span>
-        </div>
         <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-white leading-tight">
           Powerful Image & PDF Tools
         </h1>

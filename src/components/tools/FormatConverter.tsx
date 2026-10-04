@@ -1,9 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Upload, RefreshCw, Download, CheckCircle2, AlertCircle, Image as ImageIcon, Trash2, Clock, Loader2, RotateCcw, Sliders, ShieldAlert } from 'lucide-react';
-import { decode as decodeJpeg, encode as encodeJpeg } from '@jsquash/jpeg';
-import { optimise as encodePng } from '@jsquash/oxipng';
-import { decode as decodeWebp, encode as encodeWebp } from '@jsquash/webp';
-import { decode as decodeAvif, encode as encodeAvif } from '@jsquash/avif';
 
 interface DiagnosticReport {
   inputFilename: string;
@@ -221,14 +217,17 @@ export const FormatConverter: React.FC<{ initialTarget?: 'image/jpeg' | 'image/p
       let imageData: ImageData;
 
       if (item.originalFormat === 'image/jpeg') {
+        const { decode: decodeJpeg } = await import('@jsquash/jpeg');
         const res = await runWithTimeout(decodeJpeg(item.stableBuffer));
         if (!res) throw new Error('Unable to decode JPEG');
         imageData = res;
       } else if (item.originalFormat === 'image/webp') {
+        const { decode: decodeWebp } = await import('@jsquash/webp');
         const res = await runWithTimeout(decodeWebp(item.stableBuffer));
         if (!res) throw new Error('Unable to decode WebP');
         imageData = res;
       } else if (item.originalFormat === 'image/avif') {
+        const { decode: decodeAvif } = await import('@jsquash/avif');
         const res = await runWithTimeout(decodeAvif(item.stableBuffer));
         if (!res) throw new Error('Unable to decode AVIF');
         imageData = res;
@@ -274,12 +273,16 @@ export const FormatConverter: React.FC<{ initialTarget?: 'image/jpeg' | 'image/p
       let encodedBuffer: ArrayBuffer | Uint8Array;
 
       if (item.targetFormat === 'image/jpeg') {
+        const { encode: encodeJpeg } = await import('@jsquash/jpeg');
         encodedBuffer = await runWithTimeout(encodeJpeg(finalImageData, { quality }));
       } else if (item.targetFormat === 'image/png') {
+        const { optimise: encodePng } = await import('@jsquash/oxipng');
         encodedBuffer = await runWithTimeout(encodePng(finalImageData));
       } else if (item.targetFormat === 'image/webp') {
+        const { encode: encodeWebp } = await import('@jsquash/webp');
         encodedBuffer = await runWithTimeout(encodeWebp(finalImageData, { quality }));
       } else if (item.targetFormat === 'image/avif') {
+        const { encode: encodeAvif } = await import('@jsquash/avif');
         encodedBuffer = await runWithTimeout(encodeAvif(finalImageData, { quality: quality / 100 }));
       } else {
         throw new Error('Unsupported target format');

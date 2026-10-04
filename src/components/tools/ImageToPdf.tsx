@@ -1,6 +1,5 @@
 import React, { useState, useRef } from 'react';
 import { Upload, FileText, Download, RefreshCw, AlertCircle, Trash2, ArrowUp, ArrowDown, CheckCircle2, RotateCcw, Loader2, AlertTriangle, Clock } from 'lucide-react';
-import { PDFDocument } from 'pdf-lib';
 
 interface ImageItem {
   id: string;
@@ -163,6 +162,7 @@ export const ImageToPdf: React.FC = () => {
     await new Promise((resolve) => setTimeout(resolve, 40));
 
     try {
+      const { PDFDocument } = await import('pdf-lib');
       const pdfDoc = await PDFDocument.create();
       let pageWidth = 595.28;
       let pageHeight = 841.89;

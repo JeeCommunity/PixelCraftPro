@@ -1,9 +1,16 @@
 import React, { useState, useRef, useMemo } from 'react';
 import { Upload, FileText, Download, RefreshCw, AlertCircle, CheckCircle2, Sliders, Loader2, Clock } from 'lucide-react';
-import * as pdfjsLib from 'pdfjs-dist';
-import workerUrl from 'pdfjs-dist/build/pdf.worker.min.js?url';
 
-pdfjsLib.GlobalWorkerOptions.workerSrc = workerUrl || `https://unpkg.com/pdfjs-dist@${pdfjsLib.version}/build/pdf.worker.min.js`;
+let cachedPdfJs: any = null;
+const getPdfJs = async () => {
+  if (!cachedPdfJs) {
+    const pdfjsLib = await import('pdfjs-dist');
+    const { default: workerUrl } = await import('pdfjs-dist/build/pdf.worker.min.js?url');
+    pdfjsLib.GlobalWorkerOptions.workerSrc = workerUrl || `https://unpkg.com/pdfjs-dist@${pdfjsLib.version}/build/pdf.worker.min.js`;
+    cachedPdfJs = pdfjsLib;
+  }
+  return cachedPdfJs;
+};
 
 interface PdfToImageProps {
   format?: 'jpeg' | 'png';
@@ -63,6 +70,7 @@ export const PdfToImage: React.FC<PdfToImageProps> = ({
         if (!arrayBuffer) throw new Error('Empty file buffer');
         setPdfArrayBuffer(arrayBuffer);
 
+        const pdfjsLib = await getPdfJs();
         const loadingTask = pdfjsLib.getDocument({ data: arrayBuffer.slice(0) });
         const pdfDoc = await loadingTask.promise;
         const count = pdfDoc.numPages;
@@ -136,6 +144,7 @@ export const PdfToImage: React.FC<PdfToImageProps> = ({
     }, 100);
 
     try {
+      const pdfjsLib = await getPdfJs();
       const loadingTask = pdfjsLib.getDocument({ data: pdfArrayBuffer.slice(0) });
       const pdfDoc = await loadingTask.promise;
 
